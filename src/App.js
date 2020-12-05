@@ -1,11 +1,19 @@
-import Header from './components/Header';
+import { Container, Grid } from "@material-ui/core";
+import Header from "./components/Header";
+import Articles from "./components/Articles";
+import useStyles from "./styles";
 
-function App() {
+export default function App() {
+  const classes = useStyles();
+
   return (
-    <div>
-      <Header />
-    </div>
+    <Container maxWidth="lg">
+      <Container>
+        <Grid>
+          <Header />
+          <Articles />
+        </Grid>
+      </Container>
+    </Container>
   );
 }
-
-export default App;

@@ -1,6 +1,8 @@
-import React from 'react';
-import './styles.css';
+import React from "react";
+import { Typography } from '@material-ui/core';
+import useStyles from "./styles";
 
-const Header = () => <header> NEWS Dashboard </header>
-
-export default Header
+export default function Header() {
+  const classes = useStyles();
+  return <Typography className={classes.heading}>Daily Digest</Typography>;
+}
