@@ -6,7 +6,7 @@ import { fetchArticles } from '../api';
 
 // watcher saga -> actions -> worker saga
 export const searchtext = state => state.articles.searchtext;
-function* handleArticlesLoad() {
+export function* handleArticlesLoad() {
     try {      
         const search = yield select(searchtext);   
         const articles = yield call(fetchArticles, search);
