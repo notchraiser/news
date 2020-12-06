@@ -18,7 +18,7 @@ export default makeStyles({
     flexDirection: "column",
     justifyContent: "space-between",
     borderRadius: "15px",
-    height: "100%",
+    // height: "100%",
     position: "relative",
   },
   overlay: {
@@ -30,7 +30,7 @@ export default makeStyles({
   overlay2: {
     position: "absolute",
     top: "20px",
-    right: "20px",
+    right: "15px",
     color: "white",
   },
   grid: {
@@ -43,6 +43,8 @@ export default makeStyles({
   },
   title: {
     padding: "0 16px",
+    lineHeight: '1.4',
+    fontFamily: "'Nunito', 'Ubuntu','Open Sans', 'sans-serif', 'Segoe UI', 'Roboto', 'Oxygen'",
   },
   cardActions: {
     padding: "0 16px 8px 16px",
