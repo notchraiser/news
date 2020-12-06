@@ -3,6 +3,8 @@ import { makeStyles } from "@material-ui/core/styles";
 export default makeStyles((theme) => ({
   box: {
     background: '#f2f2f2',
+    minHeight: '100vh',
+    position: 'relative',
   },
   heading: {
     margin: "0 0 20px 0",
@@ -15,6 +17,9 @@ export default makeStyles((theme) => ({
     overflow: "hidden",
   },
   footer: {
+    position:'absolute',
+    bottom: 0,
+    width: '100%',
     margin: "20px 0 0 0",
     color: "#fff",
     background: "#000",

@@ -1,15 +1,19 @@
 
 const apikey = "a745c4c65e01443889e5cf862c2974f1";
-const search = ""
-var defaultUrl = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${apikey}`;
-var url = `https://newsapi.org/v2/everything?q=${search}&apiKey=${apikey}`;
-         
 
-export const fetchArticles = async() => {
-    const response = await fetch(`${defaultUrl}`);
-    const data = await response.json();
-    if(response.status >= 400) {
-        throw new Error(data.errors);
+export const fetchArticles = async(searchtext) => {
+    let url = '';
+    if (searchtext === "") {
+        url = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${apikey}`;
+    } else 
+    {
+        url = `https://newsapi.org/v2/everything?q=${searchtext}&apiKey=${apikey}`;
     }
-    return data;
+    
+    const response = await fetch(`${url}`);
+    const data = await response.json();
+    if(response.code > 200) {
+        throw new Error(response.message);
+    }
+    return data.articles;
 }

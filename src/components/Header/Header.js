@@ -9,10 +9,10 @@ export default function Header() {
   return (
     <div className={classes.root}>
       <Grid className={classes.maincontainer} container  justify='space-between' alignItems='stretch'>
-        <Grid item >
+        <Grid item>
           <Typography className={classes.heading}>The Daily Digest</Typography>
         </Grid>
-        <Grid item >
+        <Grid item>
           <Search />
         </Grid>
       </Grid>

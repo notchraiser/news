@@ -1,7 +1,7 @@
 import { ARTICLES } from '../constants';
 
 export const loadArticles = () => ({
-    type: ARTICLES.LOAD
+    type: ARTICLES.LOAD,    
 })
 
 export const setArticles = articles => ({
@@ -12,4 +12,9 @@ export const setArticles = articles => ({
 export const setError = error => ({
     type: ARTICLES.LOAD_FAIL,
     error,
+})
+
+export const SetSearchText = (searchtext) => ({
+    type: ARTICLES.SEARCHTEXT,
+    searchtext
 })

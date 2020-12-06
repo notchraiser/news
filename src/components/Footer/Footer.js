@@ -7,7 +7,7 @@ export default function Footer() {
   return (<Box className={classes.box}>
         <Typography className={classes.footer} position="static" variant="body2" align="center">
 
-        {'Copyright © '}{new Date().getFullYear()}{' '}<Link color="inherit" href="">The Daily Digest</Link>{' from News Maker Corporation '}
+        {'Copyright © Dravit Kumar '}{new Date().getFullYear()}{' '}<Link color="inherit" href="">The Daily Digest</Link>{' from News Maker Corporation '}
         </Typography>
     </Box>
     );
